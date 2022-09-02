@@ -1,6 +1,7 @@
 import { useSyncExternalStore } from 'react'
 type State = Record<string, unknown>
 type Cb = () => void
+
 function createStore<T extends State>(initialState: T) {
   const store = {
     state: initialState,
@@ -40,4 +41,4 @@ function createStore<T extends State>(initialState: T) {
   }
   return useStore
 }
-export default createStore
+export { createStore }

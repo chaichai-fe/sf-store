@@ -1,5 +1,5 @@
 import React from 'react'
-import createStore from './index'
+import { createStore } from './index'
 import { render, screen, fireEvent } from '@testing-library/react'
 const useStore = createStore({ count: 1 })
 
