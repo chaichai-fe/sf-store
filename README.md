@@ -32,10 +32,12 @@ function App() {
 ```JSX
 import { createStore } from 'sf-store'
 // pass in parameters of object type
-// then the fn can return a state an a new function to change the state
+// then the fn can return a new function
 const useStore = createStore({count: 0})
 
+
 // useStore fn can be called only in the functional component
+// then return a state and a function to change the state
 const { state, setState } = useStore()
 ```
 
