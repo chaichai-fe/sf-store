@@ -3,6 +3,9 @@ type State = Record<string, unknown>
 type Cb = () => void
 
 function createStore<T extends State>(initialState: T) {
+  if (Object.prototype.toString.call(initialState) !== '[object Object]') {
+    throw new Error('the parameters must be object type')
+  }
   const store = {
     state: initialState,
     getSnapshot: () => store.state,
