@@ -1,12 +1,14 @@
+# Intro
+
+> A so mini React Manager
+
 # Install
 
 ```bash
 $ yarn add sf-store
-# or 
+# or
 $ npm i sf-store
 ```
-
-
 
 # Usage
 
@@ -17,9 +19,9 @@ function App() {
   const { state, setState } = useStore()
   return (
     <>
-       <button onClick={() => setState({ count: state.count + 1 })}>
-          count is {state.count}
-        </button>
+      <button onClick={() => setState({ count: state.count + 1 })}>
+        count is {state.count}
+      </button>
     </>
   )
 }
@@ -37,8 +39,6 @@ const useStore = createStore({count: 0})
 const { state, setState } = useStore()
 ```
 
-
-
 # License
 
-[MIT License](https://github.com/nanxiaobei/resso/blob/main/LICENSE) (c) [柴柴_前端教书匠](https://space.bilibili.com/495118923)
+[MIT License](https://github.com/nanxiaobei/resso/blob/main/LICENSE) (c) [柴柴\_前端教书匠](https://space.bilibili.com/495118923)
