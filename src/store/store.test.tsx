@@ -1,7 +1,7 @@
 import React from 'react'
 import createStore from './index'
 import { render, screen, fireEvent } from '@testing-library/react'
-const useStore = createStore('counter', { count: 1 })
+const useStore = createStore({ count: 1 })
 
 const TestComponent = () => {
   const { state, setState } = useStore()

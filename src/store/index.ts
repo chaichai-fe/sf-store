@@ -1,9 +1,8 @@
 import { useSyncExternalStore } from 'react'
 type State = Record<string, unknown>
 type Cb = () => void
-function createStore<T extends State>(storeKey: string, initialState: T) {
+function createStore<T extends State>(initialState: T) {
   const store = {
-    storeKey,
     state: initialState,
     getSnapshot: () => store.state,
     // the method change the state
