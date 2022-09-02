@@ -28,12 +28,10 @@ function createStore<T extends State>(storeKey: string, initialState: T) {
       }
     },
   }
-
   // 外部订阅的核心方法 在组件中调用此方法可以让组件的更新订阅state
   const useState = (): T => {
     return useSyncExternalStore(store.subscribe, store.getSnapshot)
   }
-
   // 统一导出state和修改state的方法
   const useStore = () => {
     return {
@@ -41,8 +39,6 @@ function createStore<T extends State>(storeKey: string, initialState: T) {
       setState: store.setState,
     }
   }
-
   return useStore
 }
-
 export default createStore
